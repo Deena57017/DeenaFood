@@ -4,7 +4,7 @@ export default class FoodItem extends Component{
     render(){
         const {name}=this.props
         return(
-        <div>{name}</div>
+        <li className="list-group-item">{name}</li>
         )
     }
     
