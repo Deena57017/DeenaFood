@@ -32,8 +32,12 @@ class App extends Component{
   clearList=()=>{
     console.log("Clear Data");
   }
-  handleDele=(e)=>{
-    console.log("Remove Item");
+  handleDelete=(id)=>{
+  
+    const filterItems=this.state.items.filter(item=>item.id!==id)
+    this.setState({
+      items:filterItems
+    })
   }
   handleEdit=(e)=>{
     console.log("Edit Item");
