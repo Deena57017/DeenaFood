@@ -6,11 +6,15 @@ export default class FoodList extends Component{
         const {items,handleEdit,handleDelete}=this.props
         return(
 
-            <ul className="list-group my-5">
+            <ul className="list-group my-3">
+                <h3>รายการอาหาร</h3>
                 
                     {items.map(item=>{
                         return(
-                            <FoodItem key={item.id} name={item.name}/>
+                            <FoodItem key={item.id} name={item.name} 
+                            handleDelete={handleDelete}
+                            handleDelete={handleEdit}
+                            />
                         )
                     })}
                 
