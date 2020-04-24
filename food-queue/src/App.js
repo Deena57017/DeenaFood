@@ -4,14 +4,25 @@ import FoodList from './components/FoodList'
 import uuid from "uuid";
 class App extends Component{
     state={
-          items:[{id:1,name:"กะเพราไก่"},{id:2,name:"ผัดคะน้า"}],
+          items:[],
           id:uuid(),
-          items:"",
+          item:"",
           editItem:false
     };
   handleSubmit=(e)=>{
     e.preventDefault();
-    console.log("Submit Data");
+    const newItem={
+      id:this.state.id,
+      name: this.state.item
+    }
+    const updateItems=[...this.state.items,newItem]
+    this.setState({
+      items:updateItems,
+      item:"",
+      id:uuid(),
+      editItem:false
+
+    })
   }
   handleChange=(e)=>{
     this.setState({
@@ -38,11 +49,11 @@ class App extends Component{
           items={this.state.item}
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
-          handleItem={this.handleItem}
+          editItem={this.state.editItem}
           />
 
         </div>
-        <FoodList/>
+        <FoodList items={this.state.items} handleDele={this.handleDele} handleEdit={this.handleEdit}/>
         
      </div>
     );

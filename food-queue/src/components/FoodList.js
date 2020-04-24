@@ -3,11 +3,19 @@ import FoodItem from './FoodItem';
 
 export default class FoodList extends Component{
     render(){
+        const {items,handleEdit,handleDelete}=this.props
         return(
-            <div>
-                <FoodItem/>
+
+            <ul>
                 
-            </div>
+                    {items.map(item=>{
+                        return(
+                            <FoodItem key={item.id} name={item.name}/>
+                        )
+                    })}
+                
+            </ul>
+            
         )
     }
 
