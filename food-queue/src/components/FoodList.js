@@ -18,6 +18,7 @@ export default class FoodList extends Component{
                             />
                         )
                     })}
+                    <button className="btn btn-danger">Clear Food</button>
                 
             </ul>
             

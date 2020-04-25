@@ -35,12 +35,20 @@ class App extends Component{
   handleDelete=(id)=>{
   
     const filterItems=this.state.items.filter(item=>item.id!==id)
+    
     this.setState({
-      items:filterItems
+      items:filterItems,
+     
     })
   }
-  handleEdit=(e)=>{
-    console.log("Edit Item");
+  handleEdit=(id)=>{
+    const filterItems=this.state.items.filter(item=>item.id!==id)
+    const selectItem=this.state.items.find(item=>item.id==id)
+    this.setState({
+      items:filterItems,
+      id:id,
+      editItem:true
+    })
   }
 
   render(){
