@@ -57,7 +57,10 @@ class App extends Component{
   
     return(
       <div className="container">
-          <h2 align="center">Food Queue Application</h2>
+          <br></br>
+          <br></br>
+          
+        <h2 align="center">Food Queue Application</h2>
         <div className="row">
           <FoodInput 
           items={this.state.item}
