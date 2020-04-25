@@ -11,7 +11,8 @@ export default class FoodList extends Component{
                 
                     {items.map(item=>{
                         return(
-                            <FoodItem key={item.id} name={item.name} 
+                            <FoodItem key={item.id} 
+                            name={item.name} 
                             handleDelete={()=>handleDelete(item.id)}
                             handleDelete={()=>handleEdit(item.id)}
                             />
