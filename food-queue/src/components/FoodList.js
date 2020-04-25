@@ -3,7 +3,7 @@ import FoodItem from './FoodItem';
 
 export default class FoodList extends Component{
     render(){
-        const {items,handleEdit,handleDelete}=this.props
+        const {clearList,items,handleEdit,handleDelete}=this.props
         return(
 
             <ul className="list-group my-3">
@@ -14,11 +14,11 @@ export default class FoodList extends Component{
                             <FoodItem key={item.id} 
                             name={item.name} 
                             handleDelete={()=>handleDelete(item.id)}
-                            handleDelete={()=>handleEdit(item.id)}
+                            handleEdit={()=>handleEdit(item.id)}
                             />
                         )
                     })}
-                    <button className="btn btn-danger">Clear Food</button>
+                    <button className="btn btn-danger font-weight-bold"onClick={clearList}>Clear Food</button>
                 
             </ul>
             

@@ -30,7 +30,9 @@ class App extends Component{
     })
   }
   clearList=()=>{
-    console.log("Clear Data");
+    this.setState({
+      items:[]
+    })
   }
   handleDelete=(id)=>{
   
@@ -65,7 +67,13 @@ class App extends Component{
           />
 
         </div>
-        <FoodList items={this.state.items} handleDele={this.handleDele} handleEdit={this.handleEdit}/>
+        <FoodList 
+        items={this.state.items} 
+        handleDele={this.handleDele} 
+        handleEdit={this.handleEdit}
+        clearList
+        
+        />
         
      </div>
     );
