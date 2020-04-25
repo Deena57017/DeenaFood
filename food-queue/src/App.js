@@ -11,9 +11,9 @@ class App extends Component{
     };
   handleSubmit=(e)=>{
     e.preventDefault();
-    const newItem={
+      const newItem={
       id:this.state.id,
-      name: this.state.item
+      name:this.state.item
     }
     const updateItems=[...this.state.items,newItem]
     this.setState({
@@ -69,9 +69,9 @@ class App extends Component{
         </div>
         <FoodList 
         items={this.state.items} 
-        handleDele={this.handleDele} 
+        handleDelete={this.handleDelete} 
         handleEdit={this.handleEdit}
-        clearList
+        clearList={this.clearList}
         
         />
         

@@ -10,12 +10,9 @@ export default class FoodInput extends Component{
                       <label>ป้อนรายการอาหาร</label>
                       <input type="text" class="form-control" value={item} onChange={handleChange}/>
                     </div>
-                    <input type="submit"  enabled={item?false:true} 
+                    <input type="submit"  disabled={item?true:false} 
                     className={editItem?"btn btn-primary":"btn btn-success"}
                     value={editItem?"แก้ไขรายการ":"บันทึกรายการ"}/>
-                    
-                    
-
                 </form>
             </div>
 

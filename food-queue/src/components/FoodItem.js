@@ -11,11 +11,7 @@ export default class FoodItem extends Component{
             <span onClick={handleDelete}className="text-danger"><i className="fas fa-trash-alt"></i></span>
             
         </div>
-        
-        
-        
-        
-        </li>
+    </li>
         )
     }
     
